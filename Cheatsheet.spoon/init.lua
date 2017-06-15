@@ -154,7 +154,7 @@ function obj:generateHtml()
     local myMenuItems = self:getAllMenuItems(allMenuItems)
 
     local template = dofile(script_path() .. "resty/template.lua")
-    local tc = template.compile(script_path() .. "view.html")
+    local tc = template.compile(script_path() .. "view/view.html")
     local output = tc { appTitle = appTitle, menuItems = myMenuItems }
     return output
 

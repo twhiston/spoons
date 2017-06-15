@@ -1,0 +1,126 @@
+[
+  {
+    "Constant" : [
+
+    ],
+    "submodules" : [
+
+    ],
+    "Function" : [
+
+    ],
+    "Variable" : [
+      {
+        "doc" : "Logger object used within the Spoon. Can be accessed to set the default log level for the messages coming from the Spoon.",
+        "stripped_doc" : [
+          "Logger object used within the Spoon. Can be accessed to set the default log level for the messages coming from the Spoon."
+        ],
+        "desc" : "Logger object used within the Spoon. Can be accessed to set the default log level for the messages coming from the Spoon.",
+        "parameters" : [
+
+        ],
+        "notes" : [
+
+        ],
+        "signature" : "Cheatsheet.logger",
+        "type" : "Variable",
+        "returns" : [
+
+        ],
+        "def" : "Cheatsheet.logger",
+        "name" : "logger"
+      }
+    ],
+    "stripped_doc" : [
+
+    ],
+    "type" : "Module",
+    "Deprecated" : [
+
+    ],
+    "desc" : "A new Spoon",
+    "Constructor" : [
+
+    ],
+    "Field" : [
+
+    ],
+    "Method" : [
+      {
+        "doc" : "Binds hotkeys for Cheatsheet\n\nParameters:\n* mapping - A table containing hotkey objifier\/key details for the following items:\n* escape - Escape key exit\n* uit - Quit key exit\n*",
+        "stripped_doc" : [
+          "Binds hotkeys for Cheatsheet",
+          ""
+        ],
+        "desc" : "Binds hotkeys for Cheatsheet",
+        "parameters" : [
+          "* mapping - A table containing hotkey objifier\/key details for the following items:",
+          "* escape - Escape key exit",
+          "* uit - Quit key exit",
+          "*"
+        ],
+        "notes" : [
+
+        ],
+        "signature" : "Cheatsheet:bindHotkeys(mapping)",
+        "type" : "Method",
+        "returns" : [
+
+        ],
+        "def" : "Cheatsheet:bindHotkeys(mapping)",
+        "name" : "bindHotkeys"
+      }
+    ],
+    "Command" : [
+
+    ],
+    "doc" : "A new Spoon\n\nDownload: [https:\/\/github.com\/Hammerspoon\/Spoons\/raw\/master\/Spoons\/Cheatsheet.spoon.zip](https:\/\/github.com\/Hammerspoon\/Spoons\/raw\/master\/Spoons\/Cheatsheet.spoon.zip)",
+    "items" : [
+      {
+        "doc" : "Logger object used within the Spoon. Can be accessed to set the default log level for the messages coming from the Spoon.",
+        "stripped_doc" : [
+          "Logger object used within the Spoon. Can be accessed to set the default log level for the messages coming from the Spoon."
+        ],
+        "desc" : "Logger object used within the Spoon. Can be accessed to set the default log level for the messages coming from the Spoon.",
+        "parameters" : [
+
+        ],
+        "notes" : [
+
+        ],
+        "signature" : "Cheatsheet.logger",
+        "type" : "Variable",
+        "returns" : [
+
+        ],
+        "def" : "Cheatsheet.logger",
+        "name" : "logger"
+      },
+      {
+        "doc" : "Binds hotkeys for Cheatsheet\n\nParameters:\n* mapping - A table containing hotkey objifier\/key details for the following items:\n* escape - Escape key exit\n* uit - Quit key exit\n*",
+        "stripped_doc" : [
+          "Binds hotkeys for Cheatsheet",
+          ""
+        ],
+        "desc" : "Binds hotkeys for Cheatsheet",
+        "parameters" : [
+          "* mapping - A table containing hotkey objifier\/key details for the following items:",
+          "* escape - Escape key exit",
+          "* uit - Quit key exit",
+          "*"
+        ],
+        "notes" : [
+
+        ],
+        "signature" : "Cheatsheet:bindHotkeys(mapping)",
+        "type" : "Method",
+        "returns" : [
+
+        ],
+        "def" : "Cheatsheet:bindHotkeys(mapping)",
+        "name" : "bindHotkeys"
+      }
+    ],
+    "name" : "Cheatsheet"
+  }
+]

@@ -21,6 +21,7 @@ end
 local hyperFunc = {}
 hyperFunc.window = dofile(script_path().."functions/window.lua")
 hyperFunc.hyperkey = dofile(script_path().."functions/hyperkey.lua")
+hyperFunc.keyboard = dofile(script_path().."functions/keyboard.lua")
 
 
 -- Exit routine for hyper mode. Use this anywhere you need to exit

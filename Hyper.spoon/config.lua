@@ -8,7 +8,8 @@
 -- All of the keys, from here:
 -- https://github.com/Hammerspoon/hammerspoon/blob/f3446073f3e58bba0539ff8b2017a65b446954f7/extensions/keycodes/internal.m
 -- and the function keys greater than F12 removed.
-return {
+
+Config =  {
     binding = {},
     aliases = {},
     keys = {
@@ -106,4 +107,13 @@ return {
         { "up", {}, nil, nil },
     }
 }
+--
+-- constructor for Square
+--
+function Config.new()
+    local o = {}
+    setmetatable(o, { __index = Config }) -- base table added to tell Lua what values are needed to look-up.
+    return o
+end
+
 

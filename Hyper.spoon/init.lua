@@ -45,7 +45,8 @@ obj.strings.finish = "Exit"
 obj.func = dofile(script_path() .. "func.lua")
 
 -- Full list of keys for default hyperkey assignments
-obj.config = dofile(script_path() .. "config.lua")
+dofile(script_path() .. "config.lua")
+obj.config = Config.new()
 
 -- A hyperkey menubar
 -- TODO - Make loading this optional

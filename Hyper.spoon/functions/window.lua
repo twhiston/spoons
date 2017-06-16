@@ -16,16 +16,19 @@ function window:north()
         hs.window.focusedWindow():focusWindowNorth()
     end
 end
+
 function window:south()
     if hs.window.focusedWindow() then
         hs.window.focusedWindow():focusWindowSouth()
     end
 end
+
 function window:east()
     if hs.window.focusedWindow() then
         hs.window.focusedWindow():focusWindowEast()
     end
 end
+
 function window:west()
     if hs.window.focusedWindow() then
         hs.window.focusedWindow():focusWindowWest()
@@ -34,7 +37,7 @@ end
 
 window.helper = {}
 
-function window.helper:wpleft(f, max)
+function wpleft(f, max)
     f.x = max.x
     f.y = max.y
     f.w = max.w / 2
@@ -42,7 +45,7 @@ function window.helper:wpleft(f, max)
     return f
 end
 
-function window.helper:wpright(f, max)
+function wpright(f, max)
     f.x = max.x + (max.w / 2)
     f.y = max.y
     f.w = max.w / 2
@@ -50,7 +53,7 @@ function window.helper:wpright(f, max)
     return f
 end
 
-function window.helper:wptop(f, max)
+function wptop(f, max)
     f.x = max.x
     f.y = max.y
     f.w = max.w
@@ -59,7 +62,7 @@ function window.helper:wptop(f, max)
 end
 
 
-function window.helper:wpbottom(f, max)
+function wpbottom(f, max)
     f.x = max.x
     f.y = max.y + (max.h / 2)
     f.w = max.w
@@ -67,7 +70,7 @@ function window.helper:wpbottom(f, max)
     return f
 end
 
-function window.helper:wpfull(f, max)
+function wpfull(f, max)
     f.x = max.x
     f.y = max.y
     f.w = max.w
@@ -77,25 +80,23 @@ end
 
 
 window.helper.winpos = {
-    left = window.helper.wpleft,
-    right = window.helper.wpright,
-    up = window.helper.wptop,
-    down = window.helper.wpbottom,
-    full = window.helper.wpfull
+    left =wpleft,
+    right = wpright,
+    up = wptop,
+    down = wpbottom,
+    full = wpfull
 }
 
-function window:placeWindow(region)
-    return function()
-        local win = hs.window.focusedWindow()
-        local f = win:frame()
-        local screen = win:screen()
-        local max = screen:frame()
-        f = self.helper.winpos[region](f, max)
-        win:setFrame(f)
-    end
+function window:place(region)
+    local win = hs.window.focusedWindow()
+    local f = win:frame()
+    local screen = win:screen()
+    local max = screen:frame()
+    f = self.helper.winpos[region](f, max)
+    win:setFrame(f)
 end
 
-function window:minimizeWindow()
+function window:minimize()
     local win = hs.window.focusedWindow()
     win:minimize()
 end

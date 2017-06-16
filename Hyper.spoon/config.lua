@@ -10,6 +10,7 @@
 -- and the function keys greater than F12 removed.
 return {
     binding = {},
+    aliases = {},
     keys = {
         { "a", {}, nil, nil },
         { "b", {}, nil, nil },

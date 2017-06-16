@@ -26,12 +26,12 @@ obj.license = "MIT - https://opensource.org/licenses/MIT"
 obj.logger = hs.logger.new('Hyper')
 
 --- Some internal variable
---obj.key_hello = nil
+-- obj.key_hello = nil
 
 --- Hyper.some_config_param
 --- Variable
 --- Some configuration parameter
---obj.some_config_param = true
+-- obj.some_config_param = true
 
 
 -- Strings for display
@@ -86,9 +86,15 @@ function obj:bindHotkeys(config)
             hs.alert.show(obj.strings.finish)
         end
     end
+
     -- TODO - dedupe
     table.insert(self.config.keys, { self.config.binding[1], self.config.binding[2], hs.fnutils.partial(self.modal.exit, self.modal), nil })
 
+    for _, v in pairs(self.config.aliases) do
+        hs.hotkey.bind(v[2], v[1], hs.fnutils.partial(self.modal.enter, self.modal), nil)
+        -- queue up the same button to close it
+        table.insert(self.config.keys, {v[1], v[2], hs.fnutils.partial(self.modal.exit, self.modal), nil })
+    end
 
     for _, key in pairs(config.keys) do
 

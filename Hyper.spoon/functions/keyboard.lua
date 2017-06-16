@@ -19,11 +19,8 @@ end
 function kbd:nextLayout()
     local layouts = hs.keycodes.layouts()
     local current = hs.keycodes.currentLayout()
---    print(hs.inspect(layouts))
---   print(hs.inspect(current))
     local index = find(layouts,current)
     local nextLayout = next(layouts,index)
-    print(hs.inspect(nextLayout))
     if not nextLayout then
         nextLayout = 1
     end

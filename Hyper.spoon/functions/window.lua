@@ -101,4 +101,9 @@ function window:minimize()
     win:minimize()
 end
 
+function window:maximize()
+    local win = hs.window.focusedWindow()
+    win:maximize()
+end
+
 return window

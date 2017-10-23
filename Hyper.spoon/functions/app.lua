@@ -27,9 +27,40 @@ function App:toggle()
     end
 end
 
+function App:pathClip()
+    -- TODO this needs to be configurable
+    if self.currentApp == 'Finder' then
+        hs.eventtap.keyStroke({"option", "command"}, "c")
+        hs.alert.show(hs.pasteboard.readString())
+    else
+        hs.eventtap.keyStroke({"cmd"}, "c")
+    end
+end
+
 
 function App.launch(id)
     hs.application.launchOrFocus(id)
+end
+
+function App:finderRefresh()
+    if self.currentApp == 'Finder' then
+        hs.osascript.applescript([[
+tell application "Finder"
+	set theWindows to every window
+	repeat with i from 1 to number of items in theWindows
+		set this_item to item i of theWindows
+		set theView to current view of this_item
+		if theView is list view then
+			set current view of this_item to icon view
+		else
+			set current view of this_item to list view
+		end if
+		set current view of this_item to theView
+	end repeat
+end tell
+        ]])
+        hs.alert.show("Refreshed")
+    end
 end
 
 --
